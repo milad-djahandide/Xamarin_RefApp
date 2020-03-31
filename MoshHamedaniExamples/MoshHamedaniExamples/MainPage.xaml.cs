@@ -17,5 +17,11 @@ namespace MoshHamedaniExamples
         {
             InitializeComponent();
         }
+
+        async void Button_Clicked(object sender, EventArgs e)
+        {
+            Xaml_Examples.Component_Binding cmpBindingPage = new Xaml_Examples.Component_Binding();
+            content.Content = cmpBindingPage.Content;
+        }
     }
 }

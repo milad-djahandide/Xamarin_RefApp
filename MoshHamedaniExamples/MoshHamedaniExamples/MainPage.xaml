@@ -5,12 +5,11 @@
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
              mc:Ignorable="d"
              x:Class="MoshHamedaniExamples.MainPage">
-
     <StackLayout>
-        <!-- Place new controls here -->
-        <Label Text="Welcome to Xamarin.Forms!" 
-           HorizontalOptions="Center"
-           VerticalOptions="CenterAndExpand" />
+        <Button Text="Xaml Component Binding" Clicked="Button_Clicked"/>
+        <ContentView x:Name="content"/>
     </StackLayout>
+
+   
 
 </ContentPage>

@@ -10,7 +10,7 @@ namespace MoshHamedaniExamples
         {
             InitializeComponent();
 
-            MainPage = new Xaml_Examples.Component_Binding();
+            MainPage = new MainPage();
         }
 
         protected override void OnStart()
