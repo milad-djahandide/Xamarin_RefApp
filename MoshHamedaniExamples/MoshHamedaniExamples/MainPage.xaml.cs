@@ -56,5 +56,10 @@ namespace MoshHamedaniExamples
         {
             content.Content = (new Images.PlatformSpecific_Images()).Content;
         }
+
+        private void btnRoundedImage_Clicked(object sender, EventArgs e)
+        {
+            content.Content = (new Images.RoundImage()).Content;
+        }
     }
 }
