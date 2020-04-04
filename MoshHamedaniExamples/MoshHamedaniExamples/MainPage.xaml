@@ -6,8 +6,20 @@
              mc:Ignorable="d"
              x:Class="MoshHamedaniExamples.MainPage">
     <StackLayout>
-        <Button Text="Xaml Component Binding" Clicked="Button_Clicked"/>
-        <ContentView x:Name="content"/>
+        <Grid>
+            <Button Grid.Column="0" Text="Xaml Component Binding" Clicked="Button_Clicked"/>
+            <Button Grid.Column="1" Text="Dealing Different Devices" Clicked="btnDifferentDevices_Clicked"/>
+            <Button Grid.Column="2" Text="Absolute Layout" Clicked="btnAbsoluteLayout_Clicked"/>
+            <Button Grid.Column="3" Text="Relative Layout" Clicked="btnRelativeLayout_Clicked"/>
+
+            <Button Grid.Column="0" Grid.Row="1" Text="Image URI" Clicked="btnImageFromUri_Clicked"/>
+            <Button Grid.Column="1" Grid.Row="1" Text="Image Embedded" Clicked="btnImageEmbedded_Clicked"/>
+            <Button Grid.Column="2" Grid.Row="1" Text="Platform Specific Image" Clicked="btnPlatformImage_Clicked"/>
+            
+        </Grid>
+        <ContentView x:Name="content" HorizontalOptions="FillAndExpand"
+                     VerticalOptions="FillAndExpand"/>
+        
     </StackLayout>
 
    

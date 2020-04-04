@@ -1,0 +1,21 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             x:Class="MoshHamedaniExamples.Images.PlatformSpecific_Images">
+    <Grid>
+        <Button Grid.Column="0"  ImageSource="clock.png" x:Name="btn1"/>
+        <Button Grid.Column="1" >
+            <Button.ImageSource>
+                <OnPlatform x:TypeArguments="FileImageSource">
+                    <On Platform="iOS">clock.png</On>
+                    <On Platform="Android">clock.png</On>
+                    <On Platform="UWP">Images/clock.png</On>
+                </OnPlatform>
+            </Button.ImageSource>
+        </Button>
+        <Button Grid.Column="2"  x:Name="btn3"/>
+    </Grid>
+</ContentPage>

@@ -1,0 +1,28 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             x:Class="MoshHamedaniExamples.Xaml_Examples.Dealing_Different_Devices">
+    <!--Cleanest Way-->
+    <ContentPage.Padding>
+        <OnPlatform x:TypeArguments="Thickness">
+            <On Platform="Android, UWP">0</On>
+            <On Platform="iOS">0, 20, 0, 0</On>
+        </OnPlatform>
+    </ContentPage.Padding>
+    <!--Until Here-->
+    
+    <ContentPage.Content>
+        <Grid BackgroundColor="Black"
+                 HorizontalOptions="FillAndExpand" 
+                 VerticalOptions="FillAndExpand">
+            <Label HorizontalOptions="Center"
+                   VerticalOptions="Center"
+                   TextColor="White">
+                In this part different methods are shown to apply different settings for different devices (iOS, Android and UWP)
+            </Label>
+        </Grid>
+    </ContentPage.Content>
+</ContentPage>
