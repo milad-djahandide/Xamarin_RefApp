@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -12,18 +13,16 @@ namespace MoshHamedaniExamples.Lists
     [XamlCompilation(XamlCompilationOptions.Compile)]
     public partial class List_ExtraActions : ContentPage
     {
+        private ObservableCollection<Contact> _contacts;
         public List_ExtraActions()
         {
             InitializeComponent();
-            listView_TapHandling.ItemsSource = new List<Contact>
+             _contacts= new ObservableCollection<Contact>
             {
                 new Contact() { Name = "Sedigh", Status = "Maryam" } ,
                 new Contact() { Name = "Jahandide", Status = "Milad" } 
             };
-            Device.BeginInvokeOnMainThread(async () =>
-            {
-                await Application.Current.MainPage.DisplayAlert("Selected", "Hello", "OK", "Cancel");
-            });
+            listView_TapHandling.ItemsSource = listView_ContextAction.ItemsSource = _contacts;
         }
 
         private void listView_TapHandling_ItemSelected(object sender, SelectedItemChangedEventArgs e)
@@ -44,6 +43,22 @@ namespace MoshHamedaniExamples.Lists
                 await Application.Current.MainPage.DisplayAlert("Tapped", contact.Name, "OK","Cancel");
             });
 
+        }
+
+        private void Call_Clicked(object sender, EventArgs e)
+        {
+            var menuItem = sender as MenuItem;
+            var contact = menuItem.CommandParameter as Contact;
+            Device.BeginInvokeOnMainThread(async () =>
+            {
+                await Application.Current.MainPage.DisplayAlert("Call", contact.Name, "OK");
+            });
+        }
+
+        private void Delete_Clicked(object sender, EventArgs e)
+        {
+            var contact = (sender as MenuItem).CommandParameter as Contact;
+            _contacts.Remove(contact);
         }
     }
 }

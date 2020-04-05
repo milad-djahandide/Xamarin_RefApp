@@ -18,5 +18,20 @@
                 </DataTemplate>
             </ListView.ItemTemplate>
         </ListView>
+
+        <ListView x:Name="listView_ContextAction"
+                  Grid.Row="1"
+              >
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <ImageCell Text="{Binding Name}" Detail="{Binding Status}" ImageSource="{Binding ImageURI}">
+                        <ImageCell.ContextActions>
+                            <MenuItem Text="Call" Clicked="Call_Clicked" CommandParameter="{Binding .}"></MenuItem>
+                            <MenuItem Text="Delete" Clicked="Delete_Clicked" IsDestructive="True"  CommandParameter="{Binding .}"></MenuItem>
+                        </ImageCell.ContextActions>
+                    </ImageCell>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
     </Grid>
 </ContentPage>
