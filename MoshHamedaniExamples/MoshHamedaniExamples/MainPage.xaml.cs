@@ -66,5 +66,10 @@ namespace MoshHamedaniExamples
         {
             content.Content = (new Lists.Simple_List()).Content;
         }
+
+        private void btnGroupedList_Clicked(object sender, EventArgs e)
+        {
+            content.Content = (new Lists.Grouped_List()).Content;
+        }
     }
 }
