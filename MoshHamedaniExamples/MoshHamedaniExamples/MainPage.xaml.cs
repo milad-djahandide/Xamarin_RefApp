@@ -71,5 +71,10 @@ namespace MoshHamedaniExamples
         {
             content.Content = (new Lists.Grouped_List()).Content;
         }
+
+        private void btnListExtraActions_Clicked(object sender, EventArgs e)
+        {
+            content.Content = (new Lists.List_ExtraActions()).Content;
+        }
     }
 }
