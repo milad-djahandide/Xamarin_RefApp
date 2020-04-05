@@ -61,5 +61,10 @@ namespace MoshHamedaniExamples
         {
             content.Content = (new Images.RoundImage()).Content;
         }
+
+        private void btnSimpleList_Clicked(object sender, EventArgs e)
+        {
+            content.Content = (new Lists.Simple_List()).Content;
+        }
     }
 }

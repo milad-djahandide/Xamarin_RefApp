@@ -5,6 +5,14 @@
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
              mc:Ignorable="d"
              x:Class="MoshHamedaniExamples.MainPage">
+    <ContentPage.Resources>
+        <ResourceDictionary>
+            <Style TargetType="Button">
+                <Setter Property="FontSize" Value="12"/>
+            </Style>
+        </ResourceDictionary>
+    </ContentPage.Resources>
+    
     <StackLayout>
         <Grid>
             <Button Grid.Column="0" Text="Xaml Component Binding" Clicked="Button_Clicked"/>
@@ -16,7 +24,9 @@
             <Button Grid.Column="1" Grid.Row="1" Text="Image Embedded" Clicked="btnImageEmbedded_Clicked"/>
             <Button Grid.Column="2" Grid.Row="1" Text="Platform Specific Image" Clicked="btnPlatformImage_Clicked"/>
             <Button Grid.Column="3" Grid.Row="1" Text="Rounded Image" Clicked="btnRoundedImage_Clicked"/>
-            
+
+            <Button Grid.Column="0" Grid.Row="2" Text="Simple List" Clicked="btnSimpleList_Clicked"/>
+
         </Grid>
         <ContentView x:Name="content" HorizontalOptions="FillAndExpand"
                      VerticalOptions="FillAndExpand"/>
