@@ -33,5 +33,17 @@
                 </DataTemplate>
             </ListView.ItemTemplate>
         </ListView>
+
+        <ListView x:Name="listView_Refresh"
+                  Grid.Row="2"
+                  IsPullToRefreshEnabled="True"
+                  Refreshing="listView_Refresh_Refreshing"
+              >
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <ImageCell Text="{Binding Name}" Detail="{Binding Status}" ImageSource="{Binding ImageURI}"/>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
     </Grid>
 </ContentPage>

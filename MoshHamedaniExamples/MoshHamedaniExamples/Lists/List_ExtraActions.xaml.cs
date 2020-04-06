@@ -14,6 +14,14 @@ namespace MoshHamedaniExamples.Lists
     public partial class List_ExtraActions : ContentPage
     {
         private ObservableCollection<Contact> _contacts;
+        private ObservableCollection<Contact> Get_Contacts()
+        {
+            return new ObservableCollection<Contact>
+            {
+                new Contact() { Name = "Sedigh", Status = "Maryam" } ,
+                new Contact() { Name = "Jahandide", Status = "Milad" }
+            };
+        }
         public List_ExtraActions()
         {
             InitializeComponent();
@@ -23,6 +31,8 @@ namespace MoshHamedaniExamples.Lists
                 new Contact() { Name = "Jahandide", Status = "Milad" } 
             };
             listView_TapHandling.ItemsSource = listView_ContextAction.ItemsSource = _contacts;
+
+            listView_Refresh.ItemsSource = Get_Contacts();
         }
 
         private void listView_TapHandling_ItemSelected(object sender, SelectedItemChangedEventArgs e)
@@ -59,6 +69,12 @@ namespace MoshHamedaniExamples.Lists
         {
             var contact = (sender as MenuItem).CommandParameter as Contact;
             _contacts.Remove(contact);
+        }
+
+        private void listView_Refresh_Refreshing(object sender, EventArgs e)
+        {
+            listView_Refresh.ItemsSource = Get_Contacts();
+            listView_Refresh.EndRefresh();
         }
     }
 }
