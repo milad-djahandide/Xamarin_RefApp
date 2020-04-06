@@ -10,7 +10,7 @@ using Xamarin.Forms.Xaml;
 namespace MoshHamedaniExamples.Navigations
 {
     [XamlCompilation(XamlCompilationOptions.Compile)]
-    public partial class Carosal_Page : ContentPage
+    public partial class Carosal_Page : CarouselPage
     {
         public Carosal_Page()
         {

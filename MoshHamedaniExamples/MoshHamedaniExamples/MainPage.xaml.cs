@@ -94,5 +94,10 @@ namespace MoshHamedaniExamples
         {
             await Navigation.PushAsync(new Navigations.Tabbed_Page());
         }
+
+        private async void btnCarousalPage_Clicked(object sender, EventArgs e)
+        {
+            await Navigation.PushAsync(new Navigations.Carosal_Page());
+        }
     }
 }

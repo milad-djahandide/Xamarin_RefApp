@@ -4,6 +4,14 @@
              xmlns:d="http://xamarin.com/schemas/2014/forms/design"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
              mc:Ignorable="d"
-             x:Class="MoshHamedaniExamples.Navigations.Carosal_Page">
-    
+             x:Class="MoshHamedaniExamples.Navigations.Carosal_Page"
+             xmlns:md ="clr-namespace:MoshHamedaniExamples.Navigations.MasterDetail">
+
+    <ContentPage >
+        <Label Text="Content of Page1" HorizontalOptions="Center" VerticalOptions="Center"/>
+    </ContentPage>
+    <ContentPage >
+        <Label Text="Content of Page2" HorizontalOptions="Center" VerticalOptions="Center"/>
+    </ContentPage>
+
 </CarouselPage>
