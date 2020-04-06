@@ -5,48 +5,61 @@
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
              mc:Ignorable="d"
              x:Class="MoshHamedaniExamples.Lists.List_ExtraActions">
+    <ContentPage.Resources>
+        <ResourceDictionary>
+            <Style TargetType="Label">
+                <Setter Property="FontSize" Value="25"/>
+                <Setter Property="FontAttributes" Value="Bold"/>
+            </Style>
+        </ResourceDictionary>
+    </ContentPage.Resources>
 
     <Grid>
-        <ListView x:Name="listView_TapHandling"
-                  Grid.Row="0"
+        <StackLayout  Grid.Row="0">
+            <Label Text="Tap Handling"/>
+            <ListView x:Name="listView_TapHandling"                 
               ItemTapped="listView_TapHandling_ItemTapped"
               ItemSelected="listView_TapHandling_ItemSelected"    
               >
-            <ListView.ItemTemplate>
-                <DataTemplate>
-                    <ImageCell Text="{Binding Name}" Detail="{Binding Status}" ImageSource="{Binding ImageURI}"/>
-                </DataTemplate>
-            </ListView.ItemTemplate>
-        </ListView>
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <ImageCell Text="{Binding Name}" Detail="{Binding Status}" ImageSource="{Binding ImageURI}"/>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+        </StackLayout>
 
-        <ListView x:Name="listView_ContextAction"
-                  Grid.Row="1"
+        <StackLayout Grid.Row="1">
+            <Label Text="Context Action"/>
+            <ListView x:Name="listView_ContextAction">
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <ImageCell Text="{Binding Name}" Detail="{Binding Status}" ImageSource="{Binding ImageURI}">
+                            <ImageCell.ContextActions>
+                                <MenuItem Text="Call" Clicked="Call_Clicked" CommandParameter="{Binding .}"></MenuItem>
+                                <MenuItem Text="Delete" Clicked="Delete_Clicked" IsDestructive="True"  CommandParameter="{Binding .}"></MenuItem>
+                            </ImageCell.ContextActions>
+                        </ImageCell>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+        </StackLayout>
+
+        <StackLayout Grid.Row="2">
+            <Label Text="Refreshing List"/>
+            <ListView x:Name="listView_Refresh"
+                      IsPullToRefreshEnabled="True"
+                      Refreshing="listView_Refresh_Refreshing"
               >
-            <ListView.ItemTemplate>
-                <DataTemplate>
-                    <ImageCell Text="{Binding Name}" Detail="{Binding Status}" ImageSource="{Binding ImageURI}">
-                        <ImageCell.ContextActions>
-                            <MenuItem Text="Call" Clicked="Call_Clicked" CommandParameter="{Binding .}"></MenuItem>
-                            <MenuItem Text="Delete" Clicked="Delete_Clicked" IsDestructive="True"  CommandParameter="{Binding .}"></MenuItem>
-                        </ImageCell.ContextActions>
-                    </ImageCell>
-                </DataTemplate>
-            </ListView.ItemTemplate>
-        </ListView>
-
-        <ListView x:Name="listView_Refresh"
-                  Grid.Row="2"
-                  IsPullToRefreshEnabled="True"
-                  Refreshing="listView_Refresh_Refreshing"
-              >
-            <ListView.ItemTemplate>
-                <DataTemplate>
-                    <ImageCell Text="{Binding Name}" Detail="{Binding Status}" ImageSource="{Binding ImageURI}"/>
-                </DataTemplate>
-            </ListView.ItemTemplate>
-        </ListView>
-
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <ImageCell Text="{Binding Name}" Detail="{Binding Status}" ImageSource="{Binding ImageURI}"/>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+        </StackLayout>
         <StackLayout Grid.Row="3">
+            <Label Text="Search Bar"/>
             <SearchBar Placeholder="Search..." TextChanged="SearchBar_TextChanged"/>
             <ListView x:Name="listView_Searchbar" >
                 <ListView.ItemTemplate>

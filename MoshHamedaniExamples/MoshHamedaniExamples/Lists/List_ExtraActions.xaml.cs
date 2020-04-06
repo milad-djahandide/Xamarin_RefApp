@@ -34,30 +34,23 @@ namespace MoshHamedaniExamples.Lists
                 new Contact() { Name = "Sedigh", Status = "Maryam" } ,
                 new Contact() { Name = "Jahandide", Status = "Milad" } 
             };
-            listView_TapHandling.ItemsSource =
-                listView_ContextAction.ItemsSource = _contacts;
+            listView_TapHandling.ItemsSource = 
+            listView_ContextAction.ItemsSource = _contacts;
 
             listView_Refresh.ItemsSource = listView_Searchbar.ItemsSource = Get_Contacts();
         }
 
-        private void listView_TapHandling_ItemSelected(object sender, SelectedItemChangedEventArgs e)
+        private async void listView_TapHandling_ItemSelected(object sender, SelectedItemChangedEventArgs e)
         {
-            var contact = e.SelectedItem as Contact;
-            Device.BeginInvokeOnMainThread(async () =>
-            {
-                await Application.Current.MainPage.DisplayAlert("Selected", contact.Name, "OK","Cancel");
-            });
-            listView_TapHandling.SelectedItem = null;
+            
+            await Application.Current.MainPage.DisplayAlert("Selected", (e.SelectedItem as Contact).Name, "OK","Cancel");
+            
+            
         }
 
-        private void listView_TapHandling_ItemTapped(object sender, ItemTappedEventArgs e)
+        private async void listView_TapHandling_ItemTapped(object sender, ItemTappedEventArgs e)
         {
-            var contact = e.Item as Contact;
-            Device.BeginInvokeOnMainThread(async () =>
-            {
-                await Application.Current.MainPage.DisplayAlert("Tapped", contact.Name, "OK","Cancel");
-            });
-
+            await Application.Current.MainPage.DisplayAlert("Tapped", (e.Item as Contact).Name, "OK","Cancel");
         }
 
         private void Call_Clicked(object sender, EventArgs e)
