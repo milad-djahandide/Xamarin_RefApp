@@ -4,7 +4,8 @@
              xmlns:d="http://xamarin.com/schemas/2014/forms/design"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
              mc:Ignorable="d"
-             x:Class="MoshHamedaniExamples.Lists.List_ExtraActions">
+             x:Class="MoshHamedaniExamples.Lists.List_ExtraActions"
+             Title="List Extra Actions">
     <ContentPage.Resources>
         <ResourceDictionary>
             <Style TargetType="Label">

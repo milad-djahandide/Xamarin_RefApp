@@ -20,14 +20,12 @@ namespace MoshHamedaniExamples
 
         async void Button_Clicked(object sender, EventArgs e)
         {
-            Xaml_Examples.Component_Binding cmpBindingPage = new Xaml_Examples.Component_Binding();
-            content.Content = cmpBindingPage.Content;
+            await Navigation.PushAsync(new Xaml_Examples.Component_Binding());
         }
 
-        private void btnDifferentDevices_Clicked(object sender, EventArgs e)
+        private async void btnDifferentDevices_Clicked(object sender, EventArgs e)
         {
-            Xaml_Examples.Dealing_Different_Devices dealDifDevs = new Xaml_Examples.Dealing_Different_Devices();
-            content.Content = dealDifDevs.Content;
+            await Navigation.PushAsync(new Xaml_Examples.Dealing_Different_Devices());
         }
 
         private void btnAbsoluteLayout_Clicked(object sender, EventArgs e)
@@ -36,45 +34,44 @@ namespace MoshHamedaniExamples
             content.Content = absLayout.Content;
         }
 
-        private void btnRelativeLayout_Clicked(object sender, EventArgs e)
+        private async void btnRelativeLayout_Clicked(object sender, EventArgs e)
         {
-            Layout_Examples.RelativeLayout_Example relLayout = new Layout_Examples.RelativeLayout_Example();
-            content.Content = relLayout.Content;
+            await Navigation.PushAsync(new Layout_Examples.RelativeLayout_Example());
         }
 
-        private void btnImageFromUri_Clicked(object sender, EventArgs e)
+        private async void btnImageFromUri_Clicked(object sender, EventArgs e)
         {
-            content.Content = (new Images.Download_Image_URI()).Content;
+            await Navigation.PushAsync(new Images.Download_Image_URI());
         }
 
-        private void btnImageEmbedded_Clicked(object sender, EventArgs e)
+        private async void btnImageEmbedded_Clicked(object sender, EventArgs e)
         {
-            content.Content = (new Images.Emedded_Image()).Content;
+            await Navigation.PushAsync(new Images.Emedded_Image());
         }
 
-        private void btnPlatformImage_Clicked(object sender, EventArgs e)
+        private async void btnPlatformImage_Clicked(object sender, EventArgs e)
         {
-            content.Content = (new Images.PlatformSpecific_Images()).Content;
+            await Navigation.PushAsync(new Images.PlatformSpecific_Images());
         }
 
-        private void btnRoundedImage_Clicked(object sender, EventArgs e)
+        private async void btnRoundedImage_Clicked(object sender, EventArgs e)
         {
-            content.Content = (new Images.RoundImage()).Content;
+            await Navigation.PushAsync(new Images.RoundImage());
         }
 
-        private void btnSimpleList_Clicked(object sender, EventArgs e)
+        private async void btnSimpleList_Clicked(object sender, EventArgs e)
         {
-            content.Content = (new Lists.Simple_List()).Content;
+            await Navigation.PushAsync(new Lists.Simple_List());
         }
 
-        private void btnGroupedList_Clicked(object sender, EventArgs e)
+        private async void btnGroupedList_Clicked(object sender, EventArgs e)
         {
-            content.Content = (new Lists.Grouped_List()).Content;
+            await Navigation.PushAsync(new Lists.Grouped_List());
         }
 
-        private void btnListExtraActions_Clicked(object sender, EventArgs e)
+        private async void btnListExtraActions_Clicked(object sender, EventArgs e)
         {
-            content.Content = (new Lists.List_ExtraActions()).Content;
+            await Navigation.PushAsync(new Lists.List_ExtraActions());
         }
     }
 }
