@@ -17,5 +17,9 @@
             <Label Text="Go to next page"/>
             <Button Text="Next" Clicked="Button_Clicked"/>
         </StackLayout>
+        <StackLayout Grid.Row="2">
+            <Label Text="Go to Modal page"/>
+            <Button Text="Modal Page" Clicked="btnModal_Clicked"/>
+        </StackLayout>
     </Grid>
 </ContentPage>

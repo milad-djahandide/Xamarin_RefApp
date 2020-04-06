@@ -26,5 +26,10 @@ namespace MoshHamedaniExamples.Navigations
         {
             await Navigation.PopToRootAsync();
         }
+
+        private async void btnModal_Clicked(object sender, EventArgs e)
+        {
+            await Navigation.PushModalAsync(new Modal_Page());
+        }
     }
 }
