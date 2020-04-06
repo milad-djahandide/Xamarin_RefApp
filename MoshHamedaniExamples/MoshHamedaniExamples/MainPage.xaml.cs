@@ -79,5 +79,15 @@ namespace MoshHamedaniExamples
         {
             await Navigation.PushAsync(new Navigations.Hierarchical_Navigation());
         }
+
+        private async void btnSimpleMasterDetail_Clicked(object sender, EventArgs e)
+        {
+            await Navigation.PushAsync(new Navigations.Simple_MasterDetail.ContactsPage());
+        }
+
+        private async void btnMasterDetail_Clicked(object sender, EventArgs e)
+        {
+            await Navigation.PushAsync(new Navigations.MasterDetail.ContactMasterDetail());
+        }
     }
 }
