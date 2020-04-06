@@ -45,5 +45,16 @@
                 </DataTemplate>
             </ListView.ItemTemplate>
         </ListView>
+
+        <StackLayout Grid.Row="3">
+            <SearchBar Placeholder="Search..." TextChanged="SearchBar_TextChanged"/>
+            <ListView x:Name="listView_Searchbar" >
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <ImageCell Text="{Binding Name}" Detail="{Binding Status}" ImageSource="{Binding ImageURI}"/>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+        </StackLayout>
     </Grid>
 </ContentPage>
