@@ -4,12 +4,18 @@
              xmlns:d="http://xamarin.com/schemas/2014/forms/design"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
              mc:Ignorable="d"
-             x:Class="MoshHamedaniExamples.Navigations.Hierarchical_Navigation">
-    <ContentPage.Content>
-        <StackLayout>
-            <Label Text="Welcome to Xamarin.Forms!"
-                VerticalOptions="CenterAndExpand" 
-                HorizontalOptions="CenterAndExpand" />
+             x:Class="MoshHamedaniExamples.Navigations.Hierarchical_Navigation"
+             Title="Hierarchical Navigation Page1"
+             
+             >
+    <Grid>
+        <StackLayout Grid.Row="0">
+            <Label Text="Go to Home page"/>
+            <Button Text="Go back to Home" Clicked="btnHome_Clicked"/>
         </StackLayout>
-    </ContentPage.Content>
+        <StackLayout Grid.Row="1">
+            <Label Text="Go to next page"/>
+            <Button Text="Next" Clicked="Button_Clicked"/>
+        </StackLayout>
+    </Grid>
 </ContentPage>

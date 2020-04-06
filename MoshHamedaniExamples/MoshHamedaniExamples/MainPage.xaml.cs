@@ -73,5 +73,11 @@ namespace MoshHamedaniExamples
         {
             await Navigation.PushAsync(new Lists.List_ExtraActions());
         }
+
+
+        private async void btnHierarchicalNavigation_Clicked(object sender, EventArgs e)
+        {
+            await Navigation.PushAsync(new Navigations.Hierarchical_Navigation());
+        }
     }
 }

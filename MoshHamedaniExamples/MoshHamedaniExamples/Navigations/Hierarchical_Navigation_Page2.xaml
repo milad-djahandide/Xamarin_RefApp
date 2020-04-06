@@ -1,0 +1,14 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             x:Class="MoshHamedaniExamples.Navigations.Hierarchical_Navigation_Page2"
+             Title="Hierarchical Navigation Page2"
+             NavigationPage.HasBackButton="False">
+    <StackLayout>
+        <Label Text="Go to previous page"/>
+        <Button Text="Back" Clicked="Button_Clicked"/>
+    </StackLayout>
+</ContentPage>
