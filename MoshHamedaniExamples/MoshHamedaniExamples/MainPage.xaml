@@ -13,7 +13,7 @@
         </ResourceDictionary>
     </ContentPage.Resources>
     
-    <StackLayout>
+    
         <Grid>
             <Button Grid.Column="0" Text="Xaml Component Binding" Clicked="Button_Clicked"/>
             <Button Grid.Column="1" Text="Dealing Different Devices" Clicked="btnDifferentDevices_Clicked"/>
@@ -34,11 +34,10 @@
             <Button Grid.Column="2" Grid.Row="3" Text="Master-Detail Navigation" Clicked="btnMasterDetail_Clicked"/>
             <Button Grid.Column="3" Grid.Row="3" Text="Tabbed Page" Clicked="btnTabbedPage_Clicked"/>
             <Button Grid.Column="0" Grid.Row="4" Text="Carousal Page" Clicked="btnCarousalPage_Clicked"/>
+            <Button Grid.Column="1" Grid.Row="4" Text="Display Alerts" Clicked="btnDisplayAlerts_Clicked"/>
+            <Button Grid.Column="2" Grid.Row="4" Text="Toolbar Items" Clicked="btnToolbarItems_Clicked"/>
         </Grid>
-        <ContentView x:Name="content" HorizontalOptions="FillAndExpand"
-                     VerticalOptions="FillAndExpand"/>
         
-    </StackLayout>
 
    
 

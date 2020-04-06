@@ -28,10 +28,9 @@ namespace MoshHamedaniExamples
             await Navigation.PushAsync(new Xaml_Examples.Dealing_Different_Devices());
         }
 
-        private void btnAbsoluteLayout_Clicked(object sender, EventArgs e)
+        private async void btnAbsoluteLayout_Clicked(object sender, EventArgs e)
         {
-            Layout_Examples.AbsoluteLayout_Example absLayout = new Layout_Examples.AbsoluteLayout_Example();
-            content.Content = absLayout.Content;
+            await Navigation.PushAsync(new Layout_Examples.AbsoluteLayout_Example());
         }
 
         private async void btnRelativeLayout_Clicked(object sender, EventArgs e)
@@ -98,6 +97,16 @@ namespace MoshHamedaniExamples
         private async void btnCarousalPage_Clicked(object sender, EventArgs e)
         {
             await Navigation.PushAsync(new Navigations.Carosal_Page());
+        }
+
+        private async void btnDisplayAlerts_Clicked(object sender, EventArgs e)
+        {
+            await Navigation.PushAsync(new Navigations.Show_PopUps());
+        }
+
+        private async void btnToolbarItems_Clicked(object sender, EventArgs e)
+        {
+            await Navigation.PushAsync(new Navigations.ToolbarItems_Page());
         }
     }
 }
