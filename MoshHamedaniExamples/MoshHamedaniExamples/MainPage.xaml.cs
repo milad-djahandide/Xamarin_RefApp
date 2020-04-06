@@ -89,5 +89,10 @@ namespace MoshHamedaniExamples
         {
             await Navigation.PushAsync(new Navigations.MasterDetail.ContactMasterDetail());
         }
+
+        private async void btnTabbedPage_Clicked(object sender, EventArgs e)
+        {
+            await Navigation.PushAsync(new Navigations.Tabbed_Page());
+        }
     }
 }
