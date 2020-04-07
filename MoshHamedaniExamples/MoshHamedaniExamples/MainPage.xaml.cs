@@ -123,5 +123,10 @@ namespace MoshHamedaniExamples
         {
             await Navigation.PushAsync(new Forms.DateNTimePickers());
         }
+
+        private async void btntblView_Clicked(object sender, EventArgs e)
+        {
+            await Navigation.PushAsync(new Forms.TableView_Page());
+        }
     }
 }
