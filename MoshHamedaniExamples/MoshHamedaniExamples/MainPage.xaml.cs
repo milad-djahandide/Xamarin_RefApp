@@ -108,5 +108,20 @@ namespace MoshHamedaniExamples
         {
             await Navigation.PushAsync(new Navigations.ToolbarItems_Page());
         }
+
+        private async void btnSimpleInputs_Clicked(object sender, EventArgs e)
+        {
+            await Navigation.PushAsync(new Forms.Simple_input());
+        }
+
+        private async void btnEditorInput_Clicked(object sender, EventArgs e)
+        {
+            await Navigation.PushAsync(new Forms.Editor_Input());
+        }
+
+        private async void btnDateTime_Clicked(object sender, EventArgs e)
+        {
+            await Navigation.PushAsync(new Forms.DateNTimePickers());
+        }
     }
 }

@@ -1,0 +1,15 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             x:Class="MoshHamedaniExamples.Forms.DateNTimePickers"
+             Title="Date And Time Pickers"
+             xmlns:sys="clr-namespace:System;assembly=mscorlib"
+             >
+    <StackLayout>
+        <DatePicker Date="{x:Static sys:DateTime.Today}" Format="d MMM yyy" DateSelected="DatePicker_DateSelected" MinimumDate="1 Jan 2020" MaximumDate="30 Jan 2030"/>
+        <TimePicker Time="13:00"/>
+    </StackLayout>
+</ContentPage>

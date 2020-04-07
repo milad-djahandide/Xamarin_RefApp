@@ -1,0 +1,45 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             x:Class="MoshHamedaniExamples.Forms.Simple_input"
+             Title="Simple Inputs">
+    <ScrollView>
+    <Grid>
+        <Grid Grid.Row="0">
+            <Label Grid.Column="0" Text="Switch" IsVisible="{Binding Source={x:Reference switch}, Path=IsToggled}"/>
+            <Switch Grid.Column="1" x:Name="switch" IsToggled="True" Toggled="switch_Toggled"/>
+        </Grid>
+        <Grid Grid.Row="1">
+            <Label Grid.Column="0" Text="{Binding Source={x:Reference slider}, Path= Value, StringFormat='The Value of Slider is: {0:N0}'}"/>
+            <Slider Grid.Column="1" x:Name="slider" Maximum="200" Minimum="10" Value="50" />
+        </Grid>
+        <Grid Grid.Row="2">
+            <Label VerticalOptions="Center" Grid.Column="0" Text="{Binding Source={x:Reference stepper}, Path= Value, StringFormat='The Value of Stepper is: {0:N0}'}"/>
+            <Stepper VerticalOptions="Center" HorizontalOptions="Center" Grid.Column="1" x:Name="stepper" Maximum="200" Minimum="10" Value="50" Increment="5"/>
+        </Grid>
+
+        <StackLayout Grid.Row="3">
+            <Label Text="Different Entries"/>
+            <Entry Keyboard="Telephone" Placeholder="Phone Number"/>
+            <Entry Keyboard="Email" Placeholder="Email Address"/>
+            <Entry x:Name="txtPass" Keyboard="Text" IsPassword="True" Placeholder="Password" Completed="txtPass_Completed" TextChanged="Entry_TextChanged"/>
+            <Label Text="Pasword is: " x:Name="lblPassValue"/>
+            <Label Text="Completed" x:Name="lblCompleted" IsVisible="False"/>
+        </StackLayout>
+
+        <StackLayout Grid.Row="4">
+                <Picker x:Name="pkrContactMethod" Title="Contact Method" SelectedIndexChanged="Picker_SelectedIndexChanged">
+                    <Picker.Items>
+                        <x:String>SMS</x:String>
+                        <x:String>Email</x:String>
+                        <x:String>Call</x:String>
+                    </Picker.Items>
+                </Picker>     
+        </StackLayout>
+        
+    </Grid>
+    </ScrollView>
+</ContentPage>
