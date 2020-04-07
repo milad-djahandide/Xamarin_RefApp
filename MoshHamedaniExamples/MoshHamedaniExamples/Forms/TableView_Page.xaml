@@ -4,19 +4,16 @@
              xmlns:d="http://xamarin.com/schemas/2014/forms/design"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
              mc:Ignorable="d"
-             x:Class="MoshHamedaniExamples.Forms.TableView_Page">
+             x:Class="MoshHamedaniExamples.Forms.TableView_Page"
+             xmlns:local="clr-namespace:MoshHamedaniExamples">
     <TableView Intent="Form">
         <TableRoot>
             <TableSection Title="Basics">
                 <TextCell Text="Name" Detail="Milad Djahandide" />
                 <EntryCell Label="Title" Placeholder="eg Shopping" />
                 <SwitchCell Text="Notifications" On="True" />
-                <ViewCell>
-                    <StackLayout Orientation="Horizontal" Padding="13,0">
-                        <Label Text="Starts" VerticalOptions="Center"/>
-                        <DatePicker Date="1 Jan 2020" HorizontalOptions="EndAndExpand" />
-                    </StackLayout>
-                </ViewCell>
+                <local:DateCell Label="Starts" />
+                <local:DateCell Label="Ends" />
             </TableSection> 
         </TableRoot>
     </TableView>
