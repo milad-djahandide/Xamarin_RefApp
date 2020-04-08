@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             x:Class="MoshHamedaniExamples.MainPage">
+    <ContentPage.Resources>
+        <ResourceDictionary>
+            <Style TargetType="Button">
+                <Setter Property="FontSize" Value="12"/>
+            </Style>
+        </ResourceDictionary>
+    </ContentPage.Resources>
+
+
+    <Grid>
+        <Button Grid.Column="0" Text="Xaml Component Binding" Clicked="Button_Clicked"/>
+        <Button Grid.Column="1" Text="Dealing Different Devices" Clicked="btnDifferentDevices_Clicked"/>
+        <Button Grid.Column="2" Text="Absolute Layout" Clicked="btnAbsoluteLayout_Clicked"/>
+        <Button Grid.Column="3" Text="Relative Layout" Clicked="btnRelativeLayout_Clicked"/>
+
+        <Button Grid.Column="0" Grid.Row="1" Text="Image URI" Clicked="btnImageFromUri_Clicked"/>
+        <Button Grid.Column="1" Grid.Row="1" Text="Image Embedded" Clicked="btnImageEmbedded_Clicked"/>
+        <Button Grid.Column="2" Grid.Row="1" Text="Platform Specific Image" Clicked="btnPlatformImage_Clicked"/>
+        <Button Grid.Column="3" Grid.Row="1" Text="Rounded Image" Clicked="btnRoundedImage_Clicked"/>
+
+        <Button Grid.Column="0" Grid.Row="2" Text="Simple List" Clicked="btnSimpleList_Clicked"/>
+        <Button Grid.Column="1" Grid.Row="2" Text="Grouped List" Clicked="btnGroupedList_Clicked"/>
+        <Button Grid.Column="2" Grid.Row="2" Text="List Extra Actions" Clicked="btnListExtraActions_Clicked"/>
+
+        <Button Grid.Column="0" Grid.Row="3" Text="Hierarchical Navigation" Clicked="btnHierarchicalNavigation_Clicked"/>
+        <Button Grid.Column="1" Grid.Row="3" Text="Simple Master-Detail Navigation" Clicked="btnSimpleMasterDetail_Clicked"/>
+        <Button Grid.Column="2" Grid.Row="3" Text="Master-Detail Navigation" Clicked="btnMasterDetail_Clicked"/>
+        <Button Grid.Column="3" Grid.Row="3" Text="Tabbed Page" Clicked="btnTabbedPage_Clicked"/>
+        <Button Grid.Column="0" Grid.Row="4" Text="Carousal Page" Clicked="btnCarousalPage_Clicked"/>
+        <Button Grid.Column="1" Grid.Row="4" Text="Display Alerts" Clicked="btnDisplayAlerts_Clicked"/>
+        <Button Grid.Column="2" Grid.Row="4" Text="Toolbar Items" Clicked="btnToolbarItems_Clicked"/>
+
+        <Button Grid.Column="0" Grid.Row="5" Text="Simple Inputs" Clicked="btnSimpleInputs_Clicked"/>
+        <Button Grid.Column="1" Grid.Row="5" Text="Editor Input" Clicked="btnEditorInput_Clicked"/>
+        <Button Grid.Column="2" Grid.Row="5" Text="Date and Time Pickers" Clicked="btnDateTime_Clicked"/>
+        <Button Grid.Column="3" Grid.Row="5" Text="Table View" Clicked="btntblView_Clicked"/>
+        <Button Grid.Column="4" Grid.Row="5" Text="Picker with Navigation" Clicked="btnNavPicker_Clicked"/>
+
+    </Grid>
+
+
+
+
+</ContentPage>
