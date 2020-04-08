@@ -128,5 +128,10 @@ namespace MoshHamedaniExamples
         {
             await Navigation.PushAsync(new Forms.TableView_Page());
         }
+
+        private async void btnNavPicker_Clicked(object sender, EventArgs e)
+        {
+            await Navigation.PushAsync(new Forms.PickerWithNavigation());
+        }
     }
 }
