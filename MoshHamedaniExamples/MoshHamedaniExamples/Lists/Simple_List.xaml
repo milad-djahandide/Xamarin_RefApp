@@ -1,0 +1,43 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             x:Class="MoshHamedaniExamples.Lists.Simple_List">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="25"/>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+        <Label Grid.Column="0"
+               HorizontalOptions="CenterAndExpand"
+               Text="Built-in Template List (ImageCell)"/>
+        <ListView Grid.Column="0" Grid.Row="1" x:Name="list" SeparatorVisibility="Default" SeparatorColor="Blue">
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <ImageCell Text="{Binding Name}" Detail="{Binding Status}" ImageSource="{Binding ImageURI}"/>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
+        <Label Grid.Column="1"
+               HorizontalOptions="CenterAndExpand"
+               Text="Custom List "/>
+        <ListView Grid.Column="1" Grid.Row="1" x:Name="list2" HasUnevenRows="True">
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <ViewCell>
+                        <StackLayout Orientation="Horizontal" Padding="5">
+                            <Image Source="{Binding ImageURI}"/>
+                            <StackLayout HorizontalOptions="StartAndExpand">
+                                <Label Text="{Binding Name}"/>
+                                <Label Text="{Binding Status}"/>
+                            </StackLayout>
+                            <Button Text="Follow"/>
+                        </StackLayout>
+                    </ViewCell>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
+    </Grid>
+</ContentPage>
