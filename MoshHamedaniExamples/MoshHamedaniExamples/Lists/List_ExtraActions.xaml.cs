@@ -14,13 +14,17 @@ namespace MoshHamedaniExamples.Lists
     public partial class List_ExtraActions : ContentPage
     {
         private ObservableCollection<Contact> _contacts;
-        private ObservableCollection<Contact> Get_Contacts()
+        private IEnumerable<Contact> Get_Contacts(string searchText = null)
         {
-            return new ObservableCollection<Contact>
+            var contacts = new ObservableCollection<Contact>
             {
                 new Contact() { Name = "Sedigh", Status = "Maryam" } ,
                 new Contact() { Name = "Jahandide", Status = "Milad" }
             };
+
+            if (string.IsNullOrWhiteSpace(searchText))
+                return contacts;
+            return contacts.Where(c => c.Name.StartsWith(searchText));
         }
         public List_ExtraActions()
         {
@@ -30,29 +34,23 @@ namespace MoshHamedaniExamples.Lists
                 new Contact() { Name = "Sedigh", Status = "Maryam" } ,
                 new Contact() { Name = "Jahandide", Status = "Milad" } 
             };
-            listView_TapHandling.ItemsSource = listView_ContextAction.ItemsSource = _contacts;
+            listView_TapHandling.ItemsSource = 
+            listView_ContextAction.ItemsSource = _contacts;
 
-            listView_Refresh.ItemsSource = Get_Contacts();
+            listView_Refresh.ItemsSource = listView_Searchbar.ItemsSource = Get_Contacts();
         }
 
-        private void listView_TapHandling_ItemSelected(object sender, SelectedItemChangedEventArgs e)
+        private async void listView_TapHandling_ItemSelected(object sender, SelectedItemChangedEventArgs e)
         {
-            var contact = e.SelectedItem as Contact;
-            Device.BeginInvokeOnMainThread(async () =>
-            {
-                await Application.Current.MainPage.DisplayAlert("Selected", contact.Name, "OK","Cancel");
-            });
-            listView_TapHandling.SelectedItem = null;
+            
+            await Application.Current.MainPage.DisplayAlert("Selected", (e.SelectedItem as Contact).Name, "OK","Cancel");
+            
+            
         }
 
-        private void listView_TapHandling_ItemTapped(object sender, ItemTappedEventArgs e)
+        private async void listView_TapHandling_ItemTapped(object sender, ItemTappedEventArgs e)
         {
-            var contact = e.Item as Contact;
-            Device.BeginInvokeOnMainThread(async () =>
-            {
-                await Application.Current.MainPage.DisplayAlert("Tapped", contact.Name, "OK","Cancel");
-            });
-
+            await Application.Current.MainPage.DisplayAlert("Tapped", (e.Item as Contact).Name, "OK","Cancel");
         }
 
         private void Call_Clicked(object sender, EventArgs e)
@@ -75,6 +73,11 @@ namespace MoshHamedaniExamples.Lists
         {
             listView_Refresh.ItemsSource = Get_Contacts();
             listView_Refresh.EndRefresh();
+        }
+
+        private void SearchBar_TextChanged(object sender, TextChangedEventArgs e)
+        {
+            listView_Searchbar.ItemsSource = Get_Contacts(e.NewTextValue);
         }
     }
 }

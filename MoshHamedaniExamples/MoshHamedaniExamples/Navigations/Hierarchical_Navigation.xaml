@@ -1,0 +1,25 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             x:Class="MoshHamedaniExamples.Navigations.Hierarchical_Navigation"
+             Title="Hierarchical Navigation Page1"
+             
+             >
+    <Grid>
+        <StackLayout Grid.Row="0">
+            <Label Text="Go to Home page"/>
+            <Button Text="Go back to Home" Clicked="btnHome_Clicked"/>
+        </StackLayout>
+        <StackLayout Grid.Row="1">
+            <Label Text="Go to next page"/>
+            <Button Text="Next" Clicked="Button_Clicked"/>
+        </StackLayout>
+        <StackLayout Grid.Row="2">
+            <Label Text="Go to Modal page"/>
+            <Button Text="Modal Page" Clicked="btnModal_Clicked"/>
+        </StackLayout>
+    </Grid>
+</ContentPage>

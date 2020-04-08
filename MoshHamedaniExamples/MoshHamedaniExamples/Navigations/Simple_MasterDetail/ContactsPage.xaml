@@ -4,15 +4,11 @@
              xmlns:d="http://xamarin.com/schemas/2014/forms/design"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
              mc:Ignorable="d"
-             x:Class="MoshHamedaniExamples.Lists.Grouped_List"
-             Title="Grouped List">
-    <ListView x:Name="listView"
-              IsGroupingEnabled="True"
-              GroupDisplayBinding="{Binding Title}"
-              GroupShortNameBinding="{Binding ShortTitle}">
+             x:Class="MoshHamedaniExamples.Navigations.Simple_MasterDetail.ContactsPage">
+    <ListView x:Name="listView" ItemSelected="listView_ItemSelected">
         <ListView.ItemTemplate>
             <DataTemplate>
-                <ImageCell Text="{Binding Name}" Detail="{Binding Status}" ImageSource="{Binding ImageURI}"/>
+                <TextCell Text="{Binding Name}" Detail="{Binding Status}"/>
             </DataTemplate>
         </ListView.ItemTemplate>
     </ListView>

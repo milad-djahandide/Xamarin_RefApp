@@ -13,7 +13,7 @@
         </ResourceDictionary>
     </ContentPage.Resources>
     
-    <StackLayout>
+    
         <Grid>
             <Button Grid.Column="0" Text="Xaml Component Binding" Clicked="Button_Clicked"/>
             <Button Grid.Column="1" Text="Dealing Different Devices" Clicked="btnDifferentDevices_Clicked"/>
@@ -28,13 +28,23 @@
             <Button Grid.Column="0" Grid.Row="2" Text="Simple List" Clicked="btnSimpleList_Clicked"/>
             <Button Grid.Column="1" Grid.Row="2" Text="Grouped List" Clicked="btnGroupedList_Clicked"/>
             <Button Grid.Column="2" Grid.Row="2" Text="List Extra Actions" Clicked="btnListExtraActions_Clicked"/>
-            
 
-        </Grid>
-        <ContentView x:Name="content" HorizontalOptions="FillAndExpand"
-                     VerticalOptions="FillAndExpand"/>
+            <Button Grid.Column="0" Grid.Row="3" Text="Hierarchical Navigation" Clicked="btnHierarchicalNavigation_Clicked"/>
+            <Button Grid.Column="1" Grid.Row="3" Text="Simple Master-Detail Navigation" Clicked="btnSimpleMasterDetail_Clicked"/>
+            <Button Grid.Column="2" Grid.Row="3" Text="Master-Detail Navigation" Clicked="btnMasterDetail_Clicked"/>
+            <Button Grid.Column="3" Grid.Row="3" Text="Tabbed Page" Clicked="btnTabbedPage_Clicked"/>
+            <Button Grid.Column="0" Grid.Row="4" Text="Carousal Page" Clicked="btnCarousalPage_Clicked"/>
+            <Button Grid.Column="1" Grid.Row="4" Text="Display Alerts" Clicked="btnDisplayAlerts_Clicked"/>
+            <Button Grid.Column="2" Grid.Row="4" Text="Toolbar Items" Clicked="btnToolbarItems_Clicked"/>
+
+            <Button Grid.Column="0" Grid.Row="5" Text="Simple Inputs" Clicked="btnSimpleInputs_Clicked"/>
+            <Button Grid.Column="1" Grid.Row="5" Text="Editor Input" Clicked="btnEditorInput_Clicked"/>
+            <Button Grid.Column="2" Grid.Row="5" Text="Date and Time Pickers" Clicked="btnDateTime_Clicked"/>
+            <Button Grid.Column="3" Grid.Row="5" Text="Table View" Clicked="btntblView_Clicked"/>
+            <Button Grid.Column="4" Grid.Row="5" Text="Picker with Navigation" Clicked="btnNavPicker_Clicked"/>
+            
+    </Grid>
         
-    </StackLayout>
 
    
 
