@@ -14,8 +14,11 @@
             </ContentPage>
         </x:Arguments>
     </NavigationPage>
-    
-    <ContentPage Title="Page2" IconImageSource="clock.png">
-        <Label Text="Content of Page2" HorizontalOptions="Center" VerticalOptions="Center"/>
-    </ContentPage>
+    <NavigationPage Title="Page2" IconImageSource="clock.png" NavigationPage.HasNavigationBar="False">
+        <x:Arguments>
+            <ContentPage >
+                <Label Text="Content of Page2" HorizontalOptions="Center" VerticalOptions="Center"/>
+            </ContentPage>
+        </x:Arguments>
+    </NavigationPage>
 </TabbedPage>
