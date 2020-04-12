@@ -43,6 +43,7 @@
         <Button Grid.Column="3" Grid.Row="5" Text="Table View" Clicked="btntblView_Clicked"/>
         <Button Grid.Column="4" Grid.Row="5" Text="Picker with Navigation" Clicked="btnNavPicker_Clicked"/>
 
+        <Button Grid.Column="0" Grid.Row="6" Text="Application Properties" Clicked="btnAppProperties_Clicked"/>
     </Grid>
 
 

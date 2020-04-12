@@ -133,5 +133,10 @@ namespace MoshHamedaniExamples
         {
             await Navigation.PushAsync(new Forms.PickerWithNavigation());
         }
+
+        private async void btnAppProperties_Clicked(object sender, EventArgs e)
+        {
+            await Navigation.PushAsync(new DataAccess.ApplicationPropertiesDataAccess_Page());
+        }
     }
 }
