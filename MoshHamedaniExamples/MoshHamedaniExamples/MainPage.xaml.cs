@@ -138,5 +138,10 @@ namespace MoshHamedaniExamples
         {
             await Navigation.PushAsync(new DataAccess.ApplicationPropertiesDataAccess_Page());
         }
+
+        private async void btnIFileSystem_Clicked(object sender, EventArgs e)
+        {
+            await Navigation.PushAsync(new DataAccess.FileSystem_Page());
+        }
     }
 }
