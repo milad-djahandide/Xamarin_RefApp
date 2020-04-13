@@ -143,5 +143,10 @@ namespace MoshHamedaniExamples
         {
             await Navigation.PushAsync(new DataAccess.FileSystem_Page());
         }
+
+        private async void btnPclStorage_Clicked(object sender, EventArgs e)
+        {
+            await Navigation.PushAsync(new DataAccess.PclStorage_Page());
+        }
     }
 }

@@ -45,6 +45,7 @@
 
         <Button Grid.Column="0" Grid.Row="6" Text="Application Properties" Clicked="btnAppProperties_Clicked"/>
         <Button Grid.Column="1" Grid.Row="6" Text="IFileSystem" Clicked="btnIFileSystem_Clicked"/>
+        <Button Grid.Column="2" Grid.Row="6" Text="PCL Storage" Clicked="btnPclStorage_Clicked"/>
     </Grid>
 
 
